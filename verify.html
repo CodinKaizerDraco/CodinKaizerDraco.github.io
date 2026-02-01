@@ -45,19 +45,15 @@
   </div>
 
   <script>
-    function checkDate() {
-      const unlockDate = new Date("2026-02-14T00:00:00"); // 14 Feb
-      const now = new Date();
+function checkDate() {
+  const unlockDate = new Date("2026-02-14T00:00:00"); // 14 Feb
+  const now = new Date();
 
-      if (now >= unlockDate) {
-        // Go to your Valentine page
-        window.location.href = "index.html";
-      } else {
-        document.getElementById("msg").innerText =
-          "This reference is not available yet.";
-      }
-    }
-  </script>
-
-</body>
-</html>
+  if (now >= unlockDate) {
+    window.location.href = "index.html"; // redirect to Valentine page
+  } else {
+    document.getElementById("msg").innerText =
+      "This reference is not available yet.";
+  }
+}
+</script>
