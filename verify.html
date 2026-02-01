@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Verification</title>
+  <title>Account Verification</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,17 +11,18 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
     .box {
+      text-align: center;
       background: white;
       padding: 30px;
       border-radius: 8px;
-      text-align: center;
       width: 300px;
     }
     button {
-      margin-top: 15px;
       padding: 10px 18px;
+      margin-top: 15px;
       cursor: pointer;
     }
     #msg {
@@ -32,7 +33,6 @@
   </style>
 </head>
 <body>
-
   <div class="box">
     <p>Verification reference detected.</p>
     <button onclick="checkDate()">Continue</button>
@@ -45,13 +45,12 @@
       const now = new Date();
 
       if (now >= unlockDate) {
-        window.location.href = "index.html";
+        window.location.href = "index.html"; // Redirect to your Valentine page
       } else {
         document.getElementById("msg").innerText =
           "This reference is not available yet.";
       }
     }
   </script>
-
 </body>
 </html>
